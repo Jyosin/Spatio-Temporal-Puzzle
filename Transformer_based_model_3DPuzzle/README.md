@@ -1,10 +1,10 @@
-## Transformer系のモデルの学習 Training Transformer-based Models 🚀
-## 3D-puzzleの自己教師あり学習させる Self-supervised Learning of 3D Puzzle 🎯
+## Transformer系のモデルの学習 <br> Training Transformer-based Models 🚀
+## 3D-puzzleの自己教師あり学習させる <br> Self-supervised Learning of 3D Puzzle 🎯
 
 
 
 ###  概要 Overview
-VideoTransformer系のモデルでUCF101、K400を学習させるプロジェクト。
+VideoTransformer系のモデルでUCF101、K400を学習させるプロジェクト。<br>
 This project focuses on training UCF101 and K400 datasets using VideoTransformer-based models. (The reference Git repository is [here](https://github.com/mx-mark/VideoTransformer-pytorch))<br>
 The currently supported VideoTransformer models are as follows:
 - [TimeSformer](https://arxiv.org/abs/2102.05095) 📽️
