@@ -1,13 +1,15 @@
-## Transformer系のモデルでUCF101を学習させる
+## Transformer系のモデルの学習
+## 3D-puzzleの自己教師あり学習させる
 
 ### 概要
-VideoTransformer系のモデルでUCF101を学習させるプロジェクト。（参考にしたgitリポジトリは[こちら](https://github.com/mx-mark/VideoTransformer-pytorch)）<br>
+VideoTransformer系のモデルでUCF101、K400を学習させるプロジェクト。（参考にしたgitリポジトリは[こちら](https://github.com/mx-mark/VideoTransformer-pytorch)）<br>
 現在対応しているVideoTransformer系のモデルは下記の通り。
 - [TimeSformer](https://arxiv.org/abs/2102.05095)
 - [VideoVisionTransformer](https://arxiv.org/abs/2103.15691)
 - [SwinTransformer](https://arxiv.org/abs/2106.13230)
 - [MViTv2](https://arxiv.org/abs/2112.01526)
 
+3D-puzzle　の自己教師あり学習プロジェクト。参考にしたgitリポジトリは[こちら](https://yingyichen-cyy.github.io/Jigsaw-ViT/)）<br>
 ### セットアップ
 実行する前に下記手順を参考にして環境構築してください。
 1. Condaで直接環境構築する場合<br>
