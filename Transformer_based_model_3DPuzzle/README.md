@@ -1,5 +1,5 @@
 ## Transformer系のモデルの学習 <br> Training Transformer-based Models 🚀
-## 3D-puzzleの自己教師あり学習させる <br> Self-supervised Learning of 3D Puzzle 🎯
+## 3D-puzzleの自己教師あり学習させる <br> Self-supervised Learning of Spatio-Temporal-Puzzle 🎯
 
 
 
@@ -12,7 +12,7 @@ The currently supported VideoTransformer models are as follows:
 - [SwinTransformer](https://arxiv.org/abs/2106.13230) 📚
 - [MViTv2](https://arxiv.org/abs/2112.01526) 🔥
 
-3D-puzzle　の自己教師あり学習プロジェクト。参考にしたgitリポジトリは[こちら]（(https://yingyichen-cyy.github.io/Jigsaw-ViT/)）🐟<br> 
+Spatio-Temporal-Puzzleの自己教師あり学習プロジェクト。参考にしたgitリポジトリは[こちら]（(https://yingyichen-cyy.github.io/Jigsaw-ViT/)）🐟<br> 
 
 ### セットアップ
 実行する前に下記手順を参考にして環境構築してください。
