@@ -1,18 +1,25 @@
-## Transformer系のモデルの学習
-## 3D-puzzleの自己教師あり学習させる
+## Transformer系のモデルの学習 Training Transformer-based Models 🚀
+## 3D-puzzleの自己教師あり学習させる Self-supervised Learning of 3D Puzzle 🎯
 
-### 概要
-VideoTransformer系のモデルでUCF101、K400を学習させるプロジェクト。（参考にしたgitリポジトリは[こちら](https://github.com/mx-mark/VideoTransformer-pytorch)）<br>
-現在対応しているVideoTransformer系のモデルは下記の通り。
-- [TimeSformer](https://arxiv.org/abs/2102.05095)
-- [VideoVisionTransformer](https://arxiv.org/abs/2103.15691)
-- [SwinTransformer](https://arxiv.org/abs/2106.13230)
-- [MViTv2](https://arxiv.org/abs/2112.01526)
 
-3D-puzzle　の自己教師あり学習プロジェクト。参考にしたgitリポジトリは[こちら](https://yingyichen-cyy.github.io/Jigsaw-ViT/)）<br>
+
+###  概要 Overview
+VideoTransformer系のモデルでUCF101、K400を学習させるプロジェクト。
+This project focuses on training UCF101 and K400 datasets using VideoTransformer-based models. (The reference Git repository is [here](https://github.com/mx-mark/VideoTransformer-pytorch))<br>
+The currently supported VideoTransformer models are as follows:
+- [TimeSformer](https://arxiv.org/abs/2102.05095) 📽️
+- [VideoVisionTransformer](https://arxiv.org/abs/2103.15691) 💻
+- [SwinTransformer](https://arxiv.org/abs/2106.13230) 📚
+- [MViTv2](https://arxiv.org/abs/2112.01526) 🔥
+
+3D-puzzle　の自己教師あり学習プロジェクト。参考にしたgitリポジトリは[こちら](https://yingyichen-cyy.github.io/Jigsaw-ViT/)）<br> 🐟
+
 ### セットアップ
 実行する前に下記手順を参考にして環境構築してください。
+Please follow the steps below to set up the environment before running.
+
 1. Condaで直接環境構築する場合<br>
+Using Conda for direct environment setup<br>
     下記コマンドを順番に実行して環境構築してください。
     ```
     conda create -n env-ViViT python=3.10 -y
@@ -22,6 +29,8 @@ VideoTransformer系のモデルでUCF101、K400を学習させるプロジェク
     conda install tensorboard
     ```
 2. Dockerで環境構築する場合<br>
+Using Docker for environment setup<br>
+
     下記手順で環境構築してください。<br>
     1. Dockerfileからイメージ構築
         ```
