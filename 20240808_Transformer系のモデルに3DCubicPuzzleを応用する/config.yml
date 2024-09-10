@@ -1,0 +1,96 @@
+pretrain:
+  # epoch       ：エポック数
+  # batch_size  ：バッチ数
+  # optimizer   ：Optimizer。[sgd,adam,adamw]から選択すること。
+  # lr          ：学習率
+  # weight_decay：重み正則化
+  # lr_scheduler: [multistep,cosine]から選択
+  # warmup_epoch:lr_scheduler=cosineの時のみ有効
+  # val_ratio   ：学習データに占める検証データの割合
+  # color_jitter：Color Jitter(色調調整)でパラメータ。(brightness,contrast,saturation)を設定する。
+  #
+
+  epoch       : 50
+  batch_size  : 8
+  num_workers : 4
+
+  optimizer   : adamw
+  lr          : 0.0005
+  weight_decay: 0.05
+
+  cubic_puzzle:
+    is_valid      : True
+    n_grid        : (2,2,4)
+    jitter_size   : (80,80,32)
+    grayscale_prob: 0.5
+    crop_mode     : random
+
+train:
+  # epoch       ：エポック数
+  # batch_size  ：バッチ数
+  # optimizer   ：Optimizer。[sgd,adam,adamw]から選択すること。
+  # lr          ：学習率
+  # weight_decay：重み正則化
+  # lr_scheduler: [multistep,cosine]から選択
+  # warmup_epoch:lr_scheduler=cosineの時のみ有効
+  # val_ratio   ：学習データに占める検証データの割合
+  # color_jitter：Color Jitter(色調調整)でパラメータ。(brightness,contrast,saturation)を設定する。
+  #
+
+  epoch       : 50
+  batch_size  : 4
+  num_workers : 4
+
+  optimizer   : adamw
+  lr          : 0.0005
+  weight_decay: 0.05
+  lr_scheduler: cosine
+  warmup_epoch: 5
+ 
+  val_ratio   : 0.1
+
+  color_jitter: None
+
+data:
+  # num_classess  ：クラス数
+  # img_size      ：各フレームの切り抜きサイズ
+  # n_frames      ：モデルに入力する動画のフレーム数
+  # frame_interval：フレーム間の間隔
+  #               　設定例 -> n_frames = 8 , frame_interval = 4 (4フレームの間隔をあけて8フレーム分取得する)
+  #                           1 2 3 4 5 6 7 8 9 10 11 12 13 14 ...
+  #                           ↑       ↑       ↑          ↑
+  # data_path     ：動画データへのパス(datatype="Kinetics"の時は使用しない)
+  # movie_ext     ：動画の拡張子(UCF=.avi K400=.mp4を設定すること)
+  # datatype      ：使用するデータセットの種類。Kineticsを指定したときはKineticsデータセットを使う
+  # Kinetics_train_path：Kineticsの訓練データセットのパス
+  # Kinetics_valid_path：Kineticsの検証データセットのパス
+
+  num_classes   : 400
+  img_size      : 224
+  n_frames      : 32
+  frame_interval: 2
+  data_path     : /mnt/d/Work/Create/RD_REPOS/20240727_Transformer系のモデルでUCF101を学習させる/UCF101
+
+  datatype      : None
+  Kinetics_train_path: ./K400_train
+  Kinetics_valid_path: ./K400_valid
+  movie_ext     : .avi
+
+model:
+  # type                ：使用するモデルのタイプ。[timesformer,vivit,swintransformer,mvit]から選択すること。
+  # tubelet_size        ：Tubeletのサイズ（VIVITモデルのみ使用）
+  # pretrain_type       ：ImageNetの事前学習済モデルを使うか。[imagenet-1K,imagenet-21K]から選択すること。
+
+  type                : swintransformer
+  patch_size          : 16
+  tubelet_size        : 2
+  pretrain_type       : None
+
+others:
+  # rnd_seed    ：ランダムシード
+  # log_path    ：ログの出力先
+  # ckpt_path   ：モデルのチェックポイント
+
+  rnd_seed  : 1
+  log_path  : ./logs
+  ckpt_path : ./checkpoints
